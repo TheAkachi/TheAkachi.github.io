@@ -8,7 +8,7 @@ export default function App() {
       <div className="portfolio">
         <header className="header page-width">
           <a className="wordmark" href="#inicio" aria-label="Pedro Siqueira — início">
-            akachi<span aria-hidden="true">_</span>
+            Akachi
           </a>
           <nav aria-label="Navegação principal">
             <a className="nav-projects" href="#projetos">Projetos</a>
