@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="hero" id="inicio" aria-labelledby="hero-name" tabIndex={-1}>
       <div className="hero-grid page-width">
         <div className="hero-topline" aria-hidden="true">
-          <span>PORTFÓLIO / PEDRO SIQUEIRA</span><span>IDEIAS. CÓDIGO. POSSIBILIDADES.</span>
+          <span>PORTFÓLIO / PEDRO SIQUEIRA</span>
         </div>
 
         <div className="intro">

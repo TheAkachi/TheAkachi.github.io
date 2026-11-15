@@ -5,7 +5,7 @@ Portfólio pessoal desenvolvido com **React, Vite, JavaScript e CSS**, em portug
 ## Primeira entrega
 
 - Abertura responsiva com apresentação, formação e tecnologias.
-- Arte do robô aprovada, estática e destacada por iluminação azul-água.
+- Arte do robô aprovada, estática, em escala ampliada do topo à base da abertura e destacada por iluminação azul-água.
 - Silkscreen nos títulos e Manrope nos textos, servidas localmente.
 - Contato pelo [LinkedIn](https://www.linkedin.com/in/pedro-akachi).
 - Navegação por teclado, foco visível e respeito à preferência por movimento reduzido.
