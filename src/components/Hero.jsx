@@ -3,6 +3,11 @@ import { LINKEDIN_URL } from '../content.js';
 const TECHNOLOGIES = ['Node.js', 'React', 'PostgreSQL', 'Docker'];
 
 export default function Hero() {
+  // Variante reversível para comparação visual, sem substituir a arte branca aprovada.
+  const robotImage = new URLSearchParams(window.location.search).get('robo') === 'preto'
+    ? '/images/robo-preto.png'
+    : '/images/robo-polido.png';
+
   return (
     <section className="hero" id="inicio" aria-labelledby="hero-name" tabIndex={-1}>
       <div className="hero-grid page-width">
@@ -29,7 +34,7 @@ export default function Hero() {
           <div className="orbital orbital-one" />
           <div className="orbital orbital-two" />
           <div className="robot-art">
-            <img className="robot" src="/images/robo-polido.png" alt="" width="1122" height="1402" fetchPriority="high" decoding="async" />
+            <img className="robot" src={robotImage} alt="" width="1122" height="1402" fetchPriority="high" decoding="async" />
           </div>
           <span className="visual-coordinate">PS — 01</span>
         </div>

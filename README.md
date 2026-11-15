@@ -60,3 +60,7 @@ O repositório contém apenas o código desta interface e seus recursos. A publi
 A profundidade da abertura é construída em CSS: luz aqua difusa acompanhando a transparência da arte, halo localizado e sombra deslocada atrás da silhueta. As camadas de luz têm baixa opacidade e desfoque, sem traço luminoso de 1 px, para não acentuar serrilhados do recorte. Esses efeitos são estáticos e preservam o arquivo da imagem e sua centralização.
 
 A arte vigente é `robo-polido.png`: novo acabamento via Imagegen para reduzir ruído e facetas artificiais, melhorar a continuidade das curvas e manter desgaste controlado. A cabeça recebe luz aqua discreta junto do contorno. O PNG mantém 1122 × 1402 pixels; trata-se de refinamento visual, não aumento de resolução. As versões anteriores permanecem preservadas. A interface usa o alpha original como máscara para limitar franjas residuais do recorte generativo, aplicando a luz suave no contêiner depois da máscara. Os prompts estão em `public/images/robo-polido-prompt.txt`.
+
+## Comparação de cores
+
+Variante experimental preta em `http://127.0.0.1:5173/?robo=preto`. O parâmetro seleciona `public/images/robo-preto.png`, criada com Imagegen para inverter os materiais brancos e pretos, mantendo luzes aqua. A página sem parâmetro continua com a versão branca. As duas artes estão preservadas; a versão preta ainda é um teste, não uma escolha final. Prompt em `public/images/robo-preto-prompt.txt`.
