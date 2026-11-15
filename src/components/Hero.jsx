@@ -1,47 +1,10 @@
-import { useEffect, useRef } from 'react';
 import { LINKEDIN_URL } from '../content.js';
 
 const TECHNOLOGIES = ['Node.js', 'React', 'PostgreSQL', 'Docker'];
 
 export default function Hero() {
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    const motion = window.matchMedia('(prefers-reduced-motion: no-preference) and (pointer: fine) and (min-width: 901px)');
-    let frame;
-
-    const reset = () => {
-      cancelAnimationFrame(frame);
-      section.style.setProperty('--pointer-x', '0px');
-      section.style.setProperty('--pointer-y', '0px');
-    };
-    const move = (event) => {
-      if (!motion.matches) return;
-      const bounds = section.getBoundingClientRect();
-      // Move a arte inteira poucos pixels; a cabeça não gira e os textos ficam estáveis.
-      const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 18;
-      const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 12;
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(() => {
-        section.style.setProperty('--pointer-x', `${x}px`);
-        section.style.setProperty('--pointer-y', `${y}px`);
-      });
-    };
-
-    section.addEventListener('pointermove', move);
-    section.addEventListener('pointerleave', reset);
-    motion.addEventListener('change', reset);
-    return () => {
-      reset();
-      section.removeEventListener('pointermove', move);
-      section.removeEventListener('pointerleave', reset);
-      motion.removeEventListener('change', reset);
-    };
-  }, []);
-
   return (
-    <section className="hero" id="inicio" ref={sectionRef} aria-labelledby="hero-name" tabIndex={-1}>
+    <section className="hero" id="inicio" aria-labelledby="hero-name" tabIndex={-1}>
       <div className="hero-grid page-width">
         <div className="hero-topline" aria-hidden="true">
           <span>PORTFÓLIO / PEDRO SIQUEIRA</span><span>IDEIAS. CÓDIGO. POSSIBILIDADES.</span>
@@ -71,7 +34,7 @@ export default function Hero() {
 
         <div className="statement">
           <span className="statement-label" aria-hidden="true"><span /> CONSTRUINDO O PRÓXIMO PASSO</span>
-          <p>O<br /><span>FUTURO</span><br />É AGORA<span className="statement-dot" aria-hidden="true">.</span></p>
+          <p>O<br /><span className="statement-future">FUTURO</span><br /><span className="statement-ending">É AGORA<span className="statement-dot" aria-hidden="true">.</span></span></p>
           <div className="statement-line" aria-hidden="true"><span>01</span><i /><span>∞</span></div>
         </div>
 
