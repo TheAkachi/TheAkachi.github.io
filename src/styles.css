@@ -68,12 +68,12 @@ h1 > span { display: block; }
 .text-link:hover { color: var(--accent); }
 /* Compensa a margem transparente para centralizar a silhueta, não só o arquivo. */
 .hero-visual { position: absolute; z-index: 1; left: 50%; translate: -55.4% 0; width: auto; aspect-ratio: 1122 / 1402; height: calc(100% + 90px); top: 0; pointer-events: none; }
-.hero-visual::before { content: ''; position: absolute; inset: 16% -8% 15% 23%; border-radius: 50%; background: rgb(8 15 23 / 80%); filter: blur(38px); translate: 22px 28px; }
+.hero-visual::before { content: ''; position: absolute; inset: 16% -8% 15% 23%; border-radius: 50%; background: rgb(8 15 23 / 60%); filter: blur(48px); translate: 14px 24px; }
 /* A altura define a escala: a figura ocupa a abertura em vez de caber em uma coluna estreita. */
-.robot-art { position: absolute; inset: 0; filter: drop-shadow(0 0 8px rgb(129 216 216 / 16%)) drop-shadow(0 0 24px rgb(35 79 97 / 12%)) drop-shadow(18px 24px 40px rgb(8 15 23 / 88%)); }
+.robot-art { position: absolute; inset: 0; filter: drop-shadow(0 0 9px rgb(240 248 250 / 22%)) drop-shadow(0 0 26px rgb(174 197 204 / 16%)) drop-shadow(12px 20px 44px rgb(8 15 23 / 64%)); }
 /* O recorte original limita as franjas geradas; a luz é aplicada depois, no contêiner. */
 .robot { position: absolute; left: 0; width: 100%; height: 100%; max-width: none; mask-image: url('/images/robo-final.png'), linear-gradient(to bottom, var(--text) 73%, transparent 90%); mask-size: 100% 100%; mask-repeat: no-repeat; mask-composite: intersect; }
-.robot-glow { position: absolute; inset: 0 -18%; background: radial-gradient(ellipse at 49% 14%, rgb(129 216 216 / 10%), transparent 32%), radial-gradient(ellipse at 51% 35%, rgb(129 216 216 / 17%), rgb(35 79 97 / 20%) 31%, transparent 61%); mask-image: linear-gradient(to bottom, transparent, var(--text) 9%, var(--text) 80%, transparent); }
+.robot-glow { position: absolute; inset: 0 -18%; background: radial-gradient(ellipse at 49% 14%, rgb(240 248 250 / 8%), transparent 32%), radial-gradient(ellipse at 51% 35%, rgb(240 248 250 / 12%), rgb(35 79 97 / 14%) 31%, transparent 61%); mask-image: linear-gradient(to bottom, transparent, var(--text) 9%, var(--text) 80%, transparent); }
 .orbital { position: absolute; aspect-ratio: 1; border: 1px solid rgb(129 216 216 / 4%); border-radius: 50%; width: 90%; left: 5%; top: 8%; }
 .orbital-two { width: 73%; left: .5%; top: 15%; border-style: dashed; opacity: .5; }
 .visual-coordinate { position: absolute; color: var(--accent); font-size: 9px; letter-spacing: 2px; left: 15%; top: 22%; transform: rotate(-90deg); opacity: .65; }

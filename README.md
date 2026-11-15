@@ -57,7 +57,7 @@ A revisão atual centraliza a silhueta compensando a margem transparente e escur
 
 O repositório contém apenas o código desta interface e seus recursos. A publicação do site será definida separadamente.
 
-A profundidade da abertura é construída em CSS: luz aqua difusa acompanhando a transparência da arte, halo localizado e sombra deslocada atrás da silhueta. As camadas de luz têm baixa opacidade e desfoque, sem traço luminoso de 1 px, para não acentuar serrilhados do recorte. Esses efeitos são estáticos e preservam o arquivo da imagem e sua centralização.
+A profundidade da abertura é construída em CSS: luz branca fria `#F0F8FA` acompanhando a transparência da arte, halo de apoio `#AEC5CC` e sombra deslocada mais suave atrás da silhueta. As camadas de luz têm baixa opacidade e desfoque, sem traço luminoso de 1 px, para não acentuar serrilhados do recorte. Esses efeitos são estáticos e preservam o arquivo da imagem e sua centralização; as luzes aqua da própria arte permanecem.
 
 O fundo da abertura usa exclusivamente a paleta do planejamento: `#080F17`, `#14303A`, `#F0F8FA`, `#AEC5CC`, `#81D8D8` e `#234F61`. A distribuição segue a referência: base contínua em diagonal, transições longas, luz ampla no alto à esquerda e na parte inferior direita, com centro mais profundo. As camadas são estáticas e variam a intensidade e transparência do petróleo, azul difuso e aqua. A sombra e a iluminação local do robô preservam sua presença central. Hover, textos e iluminação também seguem essas bases, sem violeta, magenta ou azul elétrico. O efeito está em CSS, sem alterar a imagem ou adicionar dependências.
 
