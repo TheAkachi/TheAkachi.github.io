@@ -56,3 +56,5 @@ A arte foi produzida com auxílio de IA e refinada segundo a direção visual de
 A revisão atual centraliza a silhueta compensando a margem transparente e escurece o entorno para destacar a armadura. No celular e tablet, o slogan fica acima da figura centralizada. `robo-refinado.png` recebeu refinamento generativo de nitidez via Imagegen, mantendo transparência e 1122 × 1402 pixels: não é um aumento de resolução. Pequenas variações de textura podem existir; o original está preservado. O prompt está em `public/images/robo-refinado-prompt.txt`.
 
 O repositório contém apenas o código desta interface e seus recursos. A publicação do site será definida separadamente.
+
+A profundidade da abertura é construída em CSS: contorno aqua fino acompanhando a transparência da arte, halo localizado e sombra deslocada atrás da silhueta. Esses efeitos são estáticos e preservam o arquivo da imagem e sua centralização.
