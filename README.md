@@ -57,4 +57,4 @@ A revisão atual centraliza a silhueta compensando a margem transparente e escur
 
 O repositório contém apenas o código desta interface e seus recursos. A publicação do site será definida separadamente.
 
-A profundidade da abertura é construída em CSS: contorno aqua fino acompanhando a transparência da arte, halo localizado e sombra deslocada atrás da silhueta. Esses efeitos são estáticos e preservam o arquivo da imagem e sua centralização.
+A profundidade da abertura é construída em CSS: luz aqua difusa acompanhando a transparência da arte, halo localizado e sombra deslocada atrás da silhueta. As camadas de luz têm baixa opacidade e desfoque, sem traço luminoso de 1 px, para não acentuar serrilhados do recorte. Esses efeitos são estáticos e preservam o arquivo da imagem e sua centralização.
