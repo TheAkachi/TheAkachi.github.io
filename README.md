@@ -35,7 +35,8 @@ O build estático é gerado em `dist/`. O Node.js é usado pelas ferramentas de 
 
 ```text
 public/
-  images/robo-polido.png   Arte com acabamento limpo usada na abertura
+  images/robo-metalico.png Arte metálica usada na abertura
+  images/robo-polido.png   Acabamento anterior preservado
   images/robo-final.png    Original aprovado preservado
 src/
   components/Hero.jsx    Apresentação e composição da abertura
@@ -63,8 +64,8 @@ O filete aqua gravado na borda externa da arte é neutralizado na exibição por
 
 O fundo compartilhado da página usa exclusivamente a paleta do planejamento: `#080F17`, `#14303A`, `#F0F8FA`, `#AEC5CC`, `#81D8D8` e `#234F61`. Cabeçalho, abertura e área de projetos compartilham o mesmo campo de degradê, sem linhas ou cortes de fundo nas transições. A distribuição segue a referência: base contínua em diagonal, transições longas, luz ampla no alto à esquerda e na parte inferior direita, com centro mais profundo. As camadas são estáticas e variam a intensidade e transparência do petróleo, azul difuso e aqua. A sombra e a iluminação local do robô preservam sua presença central. Hover, textos e iluminação também seguem essas bases, sem violeta, magenta ou azul elétrico. O efeito está em CSS, sem alterar a imagem ou adicionar dependências.
 
-A arte vigente é `robo-polido.png`: novo acabamento via Imagegen para reduzir ruído e facetas artificiais, melhorar a continuidade das curvas e manter desgaste controlado. A cabeça recebe luz aqua discreta junto do contorno. O PNG mantém 1122 × 1402 pixels; trata-se de refinamento visual, não aumento de resolução. As versões anteriores permanecem preservadas. A interface usa o alpha original como máscara para limitar franjas residuais do recorte generativo, aplicando a luz suave no contêiner depois da máscara. Os prompts estão em `public/images/robo-polido-prompt.txt`.
+A arte vigente é `robo-metalico.png`: refinamento via Imagegen do acabamento anterior `robo-polido.png`, buscando metal branco mais convincente, reflexos contínuos no capacete e nas placas, leitura dos mecanismos escuros e sombras de contato entre as peças. Perfil, enquadramento, desenho geral, desgaste e luzes aqua foram preservados visualmente, com possíveis pequenas variações generativas. O PNG mantém 1122 × 1402 pixels e transparência; trata-se de refinamento de material e iluminação, sem aumento de resolução. As versões anteriores permanecem preservadas. A interface usa o alpha original como máscara para limitar franjas residuais do recorte generativo, aplicando a luz suave no contêiner depois da máscara. O prompt completo está em `public/images/robo-metalico-prompt.txt`.
 
 ## Histórico do teste de cores — encerrado
 
-Pedro encerrou o teste preto e decidiu manter a versão branca `robo-polido.png`. A seleção por `?robo=preto` foi removida: mesmo os links antigos exibem o robô branco. Layout, luz e restante da interface permanecem como antes do teste. As variantes e prompts anteriores estão preservados apenas como histórico, sem uso na página.
+Pedro encerrou o teste preto e decidiu manter a versão branca. A seleção por `?robo=preto` foi removida: mesmo os links antigos exibem o robô branco. A revisão metálica posterior também preserva essa direção branca. As variantes e prompts anteriores estão preservados apenas como histórico, sem uso na página.
