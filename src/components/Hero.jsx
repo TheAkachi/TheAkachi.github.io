@@ -24,7 +24,7 @@ export default function Hero() {
           <div className="orbital orbital-one" />
           <div className="orbital orbital-two" />
           <div className="robot-art">
-            <img className="robot" src="/images/robo-metalico.png" alt="" width="1122" height="1402" fetchPriority="high" decoding="async" />
+            <img className="robot" src="/images/robo-metalico-branco.png" alt="" width="1122" height="1402" fetchPriority="high" decoding="async" />
           </div>
           <span className="visual-coordinate">PS — 01</span>
         </div>
