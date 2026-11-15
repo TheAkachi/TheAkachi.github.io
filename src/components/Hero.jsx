@@ -28,7 +28,9 @@ export default function Hero() {
           <div className="robot-glow" />
           <div className="orbital orbital-one" />
           <div className="orbital orbital-two" />
-          <img className="robot" src="/images/robo-refinado.png" alt="" width="1122" height="1402" fetchPriority="high" decoding="async" />
+          <div className="robot-art">
+            <img className="robot" src="/images/robo-polido.png" alt="" width="1122" height="1402" fetchPriority="high" decoding="async" />
+          </div>
           <span className="visual-coordinate">PS — 01</span>
         </div>
 

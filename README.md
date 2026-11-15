@@ -35,7 +35,7 @@ O build estático é gerado em `dist/`. O Node.js é usado pelas ferramentas de 
 
 ```text
 public/
-  images/robo-refinado.png Arte refinada usada na abertura
+  images/robo-polido.png   Arte com acabamento limpo usada na abertura
   images/robo-final.png    Original aprovado preservado
 src/
   components/Hero.jsx    Apresentação e composição da abertura
@@ -58,3 +58,5 @@ A revisão atual centraliza a silhueta compensando a margem transparente e escur
 O repositório contém apenas o código desta interface e seus recursos. A publicação do site será definida separadamente.
 
 A profundidade da abertura é construída em CSS: luz aqua difusa acompanhando a transparência da arte, halo localizado e sombra deslocada atrás da silhueta. As camadas de luz têm baixa opacidade e desfoque, sem traço luminoso de 1 px, para não acentuar serrilhados do recorte. Esses efeitos são estáticos e preservam o arquivo da imagem e sua centralização.
+
+A arte vigente é `robo-polido.png`: novo acabamento via Imagegen para reduzir ruído e facetas artificiais, melhorar a continuidade das curvas e manter desgaste controlado. A cabeça recebe luz aqua discreta junto do contorno. O PNG mantém 1122 × 1402 pixels; trata-se de refinamento visual, não aumento de resolução. As versões anteriores permanecem preservadas. A interface usa o alpha original como máscara para limitar franjas residuais do recorte generativo, aplicando a luz suave no contêiner depois da máscara. Os prompts estão em `public/images/robo-polido-prompt.txt`.
