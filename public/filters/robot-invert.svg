@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="invert-materials" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <!-- Inverte os canais sem alterar o alpha ou as coordenadas da imagem. -->
+      <feComponentTransfer in="SourceGraphic" result="inverted">
+        <feFuncR type="linear" slope="-1" intercept="1" />
+        <feFuncG type="linear" slope="-1" intercept="1" />
+        <feFuncB type="linear" slope="-1" intercept="1" />
+        <feFuncA type="identity" />
+      </feComponentTransfer>
+      <feColorMatrix in="inverted" type="saturate" values="0" result="inverted-neutral" />
+      <!-- Isola os acentos aqua pela diferença entre os canais, não pelo brilho. -->
+      <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -6 3 3 0 -0.15" result="aqua-difference" />
+      <feComponentTransfer in="aqua-difference" result="aqua-mask">
+        <feFuncA type="table" tableValues="0 0 0 0.05 0.15 0.45 0.75 0.95 1 1 1" />
+      </feComponentTransfer>
+      <!-- Inclui o núcleo quase branco das luzes, além dos pixels aqua nas bordas. -->
+      <feMorphology in="aqua-mask" operator="dilate" radius="3" result="aqua-lights" />
+      <feComposite in="SourceGraphic" in2="aqua-lights" operator="in" result="original-aqua" />
+      <feComposite in="inverted-neutral" in2="aqua-lights" operator="out" result="inverted-materials" />
+      <!-- Soma as duas parcelas para conservar o alpha nas bordas suavizadas. -->
+      <feComposite in="original-aqua" in2="inverted-materials" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+    </filter>
+  </defs>
+</svg>

@@ -4,9 +4,8 @@ const TECHNOLOGIES = ['Node.js', 'React', 'PostgreSQL', 'Docker'];
 
 export default function Hero() {
   // Variante reversível para comparação visual, sem substituir a arte branca aprovada.
-  const robotImage = new URLSearchParams(window.location.search).get('robo') === 'preto'
-    ? '/images/robo-preto.png'
-    : '/images/robo-polido.png';
+  const isBlackRobot = new URLSearchParams(window.location.search).get('robo') === 'preto';
+  const robotImage = isBlackRobot ? '/images/robo-preto-corrigido.png' : '/images/robo-polido.png';
 
   return (
     <section className="hero" id="inicio" aria-labelledby="hero-name" tabIndex={-1}>
