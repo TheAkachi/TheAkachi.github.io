@@ -28,11 +28,10 @@ a:focus-visible, section:focus-visible { outline: 2px solid var(--accent); outli
 .header { height: 104px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 5; }
 .wordmark { font-family: 'Silkscreen', monospace; font-size: 27px; letter-spacing: -1.5px; padding-block: 12px; }
 .header nav { display: flex; align-items: center; gap: 42px; font-size: 13px; }
-.nav-projects { color: var(--muted); padding-block: 15px; }
-.nav-projects:hover { color: var(--text); }
-.nav-contact { display: inline-flex; gap: 24px; align-items: center; border: 1px solid var(--border); padding: 12px 17px; transition: border-color 180ms, background 180ms; }
-.nav-contact:hover { border-color: var(--accent); background: rgb(129 216 216 / 6%); }
-.nav-contact > span:first-child { font-size: 19px; color: var(--accent); }
+.header nav > a { position: relative; color: var(--muted); padding-block: 15px; transition: color 180ms ease; }
+.header nav > a::after { content: ''; position: absolute; left: 0; right: 0; bottom: 9px; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 180ms ease; }
+.header nav > a:is(:hover, :focus-visible) { color: var(--text); }
+.header nav > a:is(:hover, :focus-visible)::after { transform: scaleX(1); }
 .portfolio { position: relative; overflow: clip; isolation: isolate; background: linear-gradient(135deg, var(--light) -35%, var(--surface) 20%, var(--background) 58%, var(--surface) 100%); }
 .hero { position: relative; overflow: clip; isolation: isolate; }
 /* Campo contínuo de cor, com luz ampla nas diagonais e centro mais profundo. */
@@ -139,7 +138,7 @@ h1 > span { display: block; }
   .wordmark { font-size: 23px; }
   .header nav { gap: 0; }
   .nav-projects { display: none; }
-  .nav-contact { font-size: 11px; gap: 12px; padding: 10px 12px; }
+  .header nav { font-size: 11px; }
   .hero-grid { grid-template-rows: 55px auto 540px 65px; }
   .hero-topline { font-size: 8px; letter-spacing: 1.4px; }
   .intro { padding-top: 12px; }

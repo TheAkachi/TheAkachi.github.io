@@ -7,7 +7,7 @@ Portfólio pessoal desenvolvido com **React, Vite, JavaScript e CSS**, em portug
 - Abertura responsiva com apresentação, formação e tecnologias.
 - Arte do robô aprovada, estática, em escala ampliada do topo à base da abertura e destacada por iluminação azul-água.
 - Anton nos títulos, Inter nos textos e Silkscreen somente na assinatura Akachi, sem sublinhado ao lado. Fontes servidas localmente.
-- Link “LinkedIn” no cabeçalho, abrindo o [perfil de Pedro](https://www.linkedin.com/in/pedro-akachi) em nova aba. A apresentação mantém somente a chamada para projetos.
+- Links “Projetos” e “LinkedIn” com o mesmo estilo de texto no cabeçalho, sem caixa ou seta, com sublinhado aqua no hover e no foco por teclado. LinkedIn abre o [perfil de Pedro](https://www.linkedin.com/in/pedro-akachi) em nova aba. A apresentação mantém somente a chamada para projetos.
 - Navegação por teclado, foco visível e respeito à preferência por movimento reduzido.
 - Estado de projetos em preparação, sem trabalhos ou resultados fictícios.
 
