@@ -13,7 +13,7 @@ export default function App() {
           <nav aria-label="Navegação principal">
             <a className="nav-projects" href="#projetos">Projetos</a>
             <a className="nav-contact" href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
-              Vamos conversar <span aria-hidden="true">↗</span><span className="sr-only"> no LinkedIn (nova aba)</span>
+              LinkedIn <span aria-hidden="true">↗</span><span className="sr-only"> (nova aba)</span>
             </a>
           </nav>
         </header>

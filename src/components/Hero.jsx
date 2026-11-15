@@ -1,5 +1,3 @@
-import { LINKEDIN_URL } from '../content.js';
-
 const TECHNOLOGIES = ['Node.js', 'React', 'PostgreSQL', 'Docker'];
 
 export default function Hero() {
@@ -18,9 +16,6 @@ export default function Hero() {
           <ul className="technologies" aria-label="Tecnologias">
             {TECHNOLOGIES.map((technology) => <li key={technology}>{technology}</li>)}
           </ul>
-          <a className="primary-link" href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
-            Vamos conversar no LinkedIn <span className="arrow" aria-hidden="true">↗</span><span className="sr-only"> (nova aba)</span>
-          </a>
           <a className="text-link" href="#projetos">Conheça meus projetos <span aria-hidden="true">↓</span></a>
         </div>
 

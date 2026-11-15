@@ -7,7 +7,7 @@ Portfólio pessoal desenvolvido com **React, Vite, JavaScript e CSS**, em portug
 - Abertura responsiva com apresentação, formação e tecnologias.
 - Arte do robô aprovada, estática, em escala ampliada do topo à base da abertura e destacada por iluminação azul-água.
 - Anton nos títulos, Inter nos textos e Silkscreen somente na assinatura Akachi, sem sublinhado ao lado. Fontes servidas localmente.
-- Contato pelo [LinkedIn](https://www.linkedin.com/in/pedro-akachi).
+- Link “LinkedIn” no cabeçalho, abrindo o [perfil de Pedro](https://www.linkedin.com/in/pedro-akachi) em nova aba. A apresentação mantém somente a chamada para projetos.
 - Navegação por teclado, foco visível e respeito à preferência por movimento reduzido.
 - Estado de projetos em preparação, sem trabalhos ou resultados fictícios.
 
@@ -49,7 +49,7 @@ Para atualizar o contato, edite `src/content.js`. Os textos e as tecnologias da 
 
 ## Direção visual
 
-Fundo `#080F17`, superfícies `#14303A`, texto `#F0F8FA`, apoio `#AEC5CC`, destaque `#81D8D8` e luz `#234F61`. Arte branca com mecanismos pretos e luzes aqua. O robô e a iluminação permanecem estáticos em todas as telas. Os cartões de tecnologias têm cantos arredondados e hover com realce de fundo, borda e brilho; continuam informativos. O slogan tem escala ampliada e posição elevada.
+Fundo `#080F17`, superfícies `#14303A`, texto `#F0F8FA`, apoio `#AEC5CC`, destaque `#81D8D8` e luz `#234F61`. Arte branca com mecanismos pretos e luzes aqua. O robô e a iluminação permanecem estáticos em todas as telas. Os cartões de tecnologias têm cantos arredondados e hover com expansão suave de 6%, realce de fundo, borda e brilho; continuam informativos. A escala não desloca os elementos vizinhos e é desativada com preferência por movimento reduzido. O slogan tem escala ampliada e posição elevada.
 
 A arte foi produzida com auxílio de IA e refinada segundo a direção visual de Pedro. O código também foi desenvolvido com auxílio de IA e está sendo revisado em entregas modulares. As fontes Anton, Inter e Silkscreen são distribuídas pelos pacotes Fontsource; suas licenças estão em `public/licenses/`. Anton aproxima os títulos pesados, condensados e em caixa alta da referência Masters of the Future, enviada após a tentativa com Bebas Neue. A fonte exata da imagem não foi identificada.
 
