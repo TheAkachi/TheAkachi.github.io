@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="white-rim" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <!-- Isola uma faixa estreita do recorte; o interior da arte é preservado. -->
+      <feMorphology in="SourceAlpha" operator="erode" radius="5" result="interior" />
+      <feComposite in="SourceAlpha" in2="interior" operator="out" result="edge" />
+      <feGaussianBlur in="edge" stdDeviation="0.6" result="soft-edge" />
+      <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -5 2.5 2.5 0 -0.05" result="aqua-mask" />
+      <feComposite in="aqua-mask" in2="soft-edge" operator="in" result="rim-mask" />
+      <feColorMatrix in="SourceGraphic" type="saturate" values="0" result="neutral" />
+      <!-- Leve realce branco frio, mantendo a gradação e a nitidez do filete. -->
+      <feComponentTransfer in="neutral" result="white-light">
+        <feFuncR type="gamma" amplitude="0.96" exponent="0.8" offset="0" />
+        <feFuncG type="gamma" amplitude="0.992" exponent="0.8" offset="0" />
+        <feFuncB type="gamma" amplitude="1" exponent="0.8" offset="0" />
+        <feFuncA type="identity" />
+      </feComponentTransfer>
+      <feComposite in="white-light" in2="rim-mask" operator="in" result="white-rim" />
+      <feComposite in="SourceGraphic" in2="rim-mask" operator="out" result="unchanged" />
+      <!-- Desloca apenas os detalhes ciano/aqua internos para o azul elétrico (#298DFF), preservando branco, cinza e preto. -->
+      <feColorMatrix in="unchanged" type="hueRotate" values="38" result="blue-accents" />
+      <feComposite in="white-rim" in2="blue-accents" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+    </filter>
+  </defs>
+</svg>
