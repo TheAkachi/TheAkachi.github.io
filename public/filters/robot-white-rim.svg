@@ -17,7 +17,9 @@
       </feComponentTransfer>
       <feComposite in="white-light" in2="rim-mask" operator="in" result="white-rim" />
       <feComposite in="SourceGraphic" in2="rim-mask" operator="out" result="unchanged" />
-      <feComposite in="white-rim" in2="unchanged" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+      <!-- Desloca apenas os detalhes ciano/aqua internos para o azul elétrico (#298DFF), preservando branco, cinza e preto. -->
+      <feColorMatrix in="unchanged" type="hueRotate" values="38" result="blue-accents" />
+      <feComposite in="white-rim" in2="blue-accents" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
     </filter>
   </defs>
 </svg>
